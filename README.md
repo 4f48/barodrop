@@ -62,7 +62,7 @@ To be able to screw the different components together, you need to install threa
 - Populate the rest of the holes with M2.5 inserts.
 
 ### 4. Solder the components
-![barodrop wiring diagram](/home/x4f48/Desktop/barodrop/barodrop_wiring.png)
+![barodrop wiring diagram](barodrop_wiring.png)
 
 Follow this wiring diagram to connect the components together. You might need to cut off a plug from the end of the servo's wires.
 
