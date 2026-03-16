@@ -40,9 +40,9 @@ You'll have to source some components to build barodrop. You can find everything
 | cylinder head M2, M2.5            | screws          | locally sourced / [Amazon](https://www.amazon.de/-/en/FandWay-Cylinder-Hexagon-Threaded-Stainless/dp/B0F3HJHFFS?th=1)                                                              |
 | Dupont Wires                      | jumper wires    | locally sourced / [Amazon](https://www.amazon.de/-/en/Elegoo-120pcs-Multicolored-Breadboard-arduino/dp/B01EV70C78?s=industrial&th=1)                                                 |
 
->| Any screws (with the correct sizes) and any wires you have lying around the house will do. If you do not have any, chances are you can find these at your local hardware store. I included some Amazon links for reference.
+> Any screws (with the correct sizes) and any wires you have lying around the house will do. If you do not have any, chances are you can find these at your local hardware store. I included some Amazon links for reference.
 
->| You can find a [more detailed BOM](https://github.com/4f48/barodrop/blob/main/BOM.csv) in the repository files.
+> You can find a [more detailed BOM](https://github.com/4f48/barodrop/blob/main/BOM.csv) in the repository files.
 
 To complete the build, you need to 3D print some parts. If you do not own a 3D printer, try a print-on-demand service. Additionally, a soldering iron with a threaded insert adapter, some solder and very basic soldering skills are needed.
 
@@ -99,4 +99,4 @@ Download as OpenDocument Spreadsheet: [BOM.ods](https://github.com/4f48/barodrop
 | cylinder head M2, M2.5            | screws          | locally sourced / [Amazon](https://www.amazon.de/-/en/FandWay-Cylinder-Hexagon-Threaded-Stainless/dp/B0F3HJHFFS?th=1)                                                              |
 | Dupont Wires                      | jumper wires    | locally sourced / [Amazon](https://www.amazon.de/-/en/Elegoo-120pcs-Multicolored-Breadboard-arduino/dp/B01EV70C78?s=industrial&th=1)                                                 |
 
->| Any screws (with the correct sizes) and any wires you have lying around the house will do. If you do not have any, chances are you can find these at your local hardware store. I included some Amazon links for reference.
+> Any screws (with the correct sizes) and any wires you have lying around the house will do. If you do not have any, chances are you can find these at your local hardware store. I included some Amazon links for reference.
