@@ -1,17 +1,13 @@
-import time
-
+import storage
+import sdcardio
 import board
 import busio
 import digitalio
-import sdcardio
-import storage
-import supervisor
-from adafruit_dps310 import advanced
+import time
+import adafruit_bmp3xx
 
-supervisor.runtime.autoreload = False
-
-spi0 = busio.SPI(board.SDA, board.SCL, board.TX)
-sd = sdcardio.SDCard(spi0, board.RX)
+spi = busio.SPI(board.SD_CLK, board.SD_MOSI, board.SD_MISO)
+sd = sdcardio.SDCard(spi, board.SD_CS)
 vfs = storage.VfsFat(sd)
 storage.mount(vfs, "/sd")
 
@@ -47,38 +43,14 @@ if altitude is None or timeout is None:
 
 print(f"configuration: altitude={altitude}, timeout={timeout}")
 
-i2c = busio.I2C(board.A3, board.A2)
-dps310 = advanced.DPS310_Advanced(i2c)
+i2c = board.STEMMA_I2C()
+bmp = adafruit_bmp3xx.BMP3XX_I2C(i2c)
 
-dps310.reset()
-
-dps310.pressure_rate = advanced.Rate.RATE_1_HZ  # type: ignore
-dps310.temperature_rate = advanced.Rate.RATE_1_HZ  # type: ignore
-dps310.pressure_oversample_count = advanced.SampleCount.COUNT_16  # type: ignore
-dps310.temperature_oversample_count = advanced.SampleCount.COUNT_16  # type: ignore
-
-dps310.mode = advanced.Mode.CONT_PRESTEMP  # type: ignore
-dps310.wait_temperature_ready()
-dps310.wait_pressure_ready()
-
-dps310.sea_level_pressure = dps310.pressure
-
-start = time.monotonic()
-
-for _ in range(3):
-    led.value = True
-    time.sleep(0.1)
-    led.value = False
-    time.sleep(0.1)
+bmp.reset()
+bmp.pressure_oversampling = 8
+bmp.temperature_oversampling = 1
+bmp.filter_coefficient = 2
 
 while True:
-    alt = dps310.altitude
-    elapsed = time.monotonic() - start
-    print(f"{alt} {elapsed}")
-    if alt > altitude or elapsed > timeout:
-        while True:
-            led.value = True
-            time.sleep(0.1)
-            led.value = False
-            time.sleep(0.1)
-    time.sleep(1.0)
+    print(bmp.altitude)
+
