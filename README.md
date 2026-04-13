@@ -68,14 +68,10 @@ Follow this wiring diagram to connect the components together. You might need to
 
 The battery comes with an incompatible connector from the factory. Cut it off, and solder on the 2-pin JST PH cable. Keep polarity in mind.
 
-### 5. Load firmware
-Firstly, download the CircuitPython UF2 from [circuitpython.org](https://circuitpython.org/board/adafruit_feather_rp2040_adalogger/). To enter the bootloader, hold down the "Boot" button, and while continuing to hold it, press and release the "Reset" button. Keep holding the "Boot" button until the RPI-RP2 drive appears. Copy the downloaded file to the RPI-RP2 drive. The RPI-RP2 drive will disappear and a new disk drive called CIRCUITPY will appear.
+### 5. Load firmware (outdated, rewrite later)
+Firstly, download [barodrop-firmware](https://github.com/4f48/barodrop/blob/main/barodrop-firmware) from this repository.
 
-Next, download the CircuitPython library bundle for version 10.x from [circuitpython.org](https://circuitpython.org/libraries). Unzip the downloaded file and copy "adafruit_bmp3xx.mpy" from the "lib" directory to the CIRCUITPY drive's "lib" directory. 
-
-Finally, download [code.py](https://github.com/4f48/barodrop/blob/main/code.py) from this repository, and replace the contents of the "code.py" file already on the CIRCUITPY drive with the downloaded file's.
-
-To ensure the new firmware is loaded correctly, press the "Reset" button on the board.
+Enter the bootloader by holding down the "Boot" button, and while continuing to hold it, press and release the "Reset" button. Keep holding the "Boot" button until the RPI-RP2 drive appears. Copy the downloaded firmware file to the RPI-RP2 drive. The RPI-RP2 drive will disappear when the firmware is loaded.
 
 ### 6. Assembly
 You are almost done, we just need to put everything together. Start by placing the battery in the bottom enclosure. Cover it with the battery holder, and screw in the battery holder from the bottom. Next, mount the main board, the barometer and the booster to the bottom enclosure.
