@@ -68,7 +68,7 @@ Follow this wiring diagram to connect the components together. You might need to
 
 The battery comes with an incompatible connector from the factory. Cut it off, and solder on the 2-pin JST PH cable. Keep polarity in mind.
 
-### 5. Load firmware (outdated, rewrite later)
+### 5. Load firmware
 Firstly, download [barodrop-firmware](https://github.com/4f48/barodrop/blob/main/barodrop-firmware) from this repository.
 
 Enter the bootloader by holding down the "Boot" button, and while continuing to hold it, press and release the "Reset" button. Keep holding the "Boot" button until the RPI-RP2 drive appears. Copy the downloaded firmware file to the RPI-RP2 drive. The RPI-RP2 drive will disappear when the firmware is loaded.
